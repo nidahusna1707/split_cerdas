@@ -1,27 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Fredoka', sans-serif;
+  background-color: #f8fffe;
+  color: #1a1a2e;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+:root {
+  --green: #2ECC71;
+  --navy: #1a1a2e;
+  --gold: #F1C40F;
+  --cyan: #00BCD4;
+  --white: #FFFFFF;
+}
+
+.btn-primary {
+  background-color: #2ECC71;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #2ECC71;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: 2px solid #2ECC71;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background-color: #2ECC71;
+  color: white;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e8f5e9;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: 'Fredoka', sans-serif;
+  transition: border-color 0.2s;
+  outline: none;
+  background: #fafffe;
+}
+
+.input-field:focus {
+  border-color: #2ECC71;
 }
