@@ -1,4 +1,5 @@
 import './globals.css'
+import SplitBot from './components/SplitBot'
 
 export const metadata = {
   title: 'SplitCerdas',
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SplitBot />
+      </body>
     </html>
   )
 }
