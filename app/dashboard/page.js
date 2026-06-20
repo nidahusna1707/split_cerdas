@@ -54,10 +54,23 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ background: '#f8fffe' }}>
+    <div className="min-h-screen relative overflow-hidden" style={{ background: '#f8fffe' }}>
+      <div className="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10 pointer-events-none" style={{ background: '#2ECC71', filter: 'blur(60px)' }}></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-10 pointer-events-none" style={{ background: '#F1C40F', filter: 'blur(60px)' }}></div>
       <Navbar user={user} />
 
       <div className="max-w-2xl mx-auto p-4">
+        <div className="grid grid-cols-2 gap-3 mb-6 mt-4">
+          <div className="card" style={{ background: 'linear-gradient(135deg, #2ECC71 0%, #27ae60 100%)' }}>
+            <p className="text-white/80 text-xs font-semibold">Total Grup</p>
+            <p className="text-white text-2xl font-bold mt-1">{groups.length}</p>
+          </div>
+          <div className="card" style={{ background: 'linear-gradient(135deg, #F1C40F 0%, #d4ac0d 100%)' }}>
+            <p className="text-white/80 text-xs font-semibold">Status</p>
+            <p className="text-white text-2xl font-bold mt-1">🌿 Syariah</p>
+          </div>
+        </div>
+
         <div className="flex items-center justify-between mb-6 mt-4">
           <div>
             <h1 className="text-2xl font-bold" style={{ color: '#1a1a2e' }}>Grup Saya</h1>
